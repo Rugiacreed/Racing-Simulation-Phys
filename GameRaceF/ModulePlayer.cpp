@@ -21,9 +21,20 @@ bool ModulePlayer::Start()
 	VehicleInfo car;
 
 	// Car properties ----------------------------------------
-	car.chassis_size.Set(2, 2, 4);
-	car.chassis_offset.Set(0, 1.5, 0);
-	car.mass = 500.0f;
+	car.chassis_size.Set(2, 1.2, 4);
+	car.chassis_offset.Set(0, 1.3, 0);
+	
+	car.frontcube_size.Set(2, 0.8, 1.5);
+	car.frontcube_offset.Set(0, 1.1, 2.2);
+
+	car.backcube_size.Set(3.2, 0.4, 0.7);
+	car.backcube_offset.Set(0, 2, -2.6);
+	car.backcubereinforce1_size.Set(0.2, 0.2, 0.7);
+	car.backcubereinforce1_offset.Set(-1, 1.7, -2.2);
+	car.backcubereinforce2_size.Set(0.2, 0.2, 0.7);
+	car.backcubereinforce2_offset.Set(1, 1.7, -2.2);
+
+	car.mass = 600.0f;
 	car.suspensionStiffness = 15.88f;
 	car.suspensionCompression = 0.83f;
 	car.suspensionDamping = 0.88f;
@@ -39,7 +50,7 @@ bool ModulePlayer::Start()
 
 	// Don't change anything below this line ------------------
 
-	float half_width = car.chassis_size.x*0.5f;
+	float half_width = car.chassis_size.x*0.7f;
 	float half_length = car.chassis_size.z*0.5f;
 	
 	vec3 direction(0,-1,0);

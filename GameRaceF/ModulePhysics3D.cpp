@@ -281,12 +281,42 @@ PhysVehicle3D* ModulePhysics3D::AddVehicle(const VehicleInfo& info)
 
 	btCollisionShape* colShape = new btBoxShape(btVector3(info.chassis_size.x*0.5f, info.chassis_size.y*0.5f, info.chassis_size.z*0.5f));
 	shapes.add(colShape);
-
 	btTransform trans;
 	trans.setIdentity();
 	trans.setOrigin(btVector3(info.chassis_offset.x, info.chassis_offset.y, info.chassis_offset.z));
-
 	comShape->addChildShape(trans, colShape);
+
+
+	btCollisionShape* colfrontcube = new btBoxShape(btVector3(info.frontcube_size.x * 0.5f, info.frontcube_size.y * 0.5f, info.frontcube_size.z * 0.5f));
+	shapes.add(colfrontcube);
+	btTransform transfrontcube;
+	transfrontcube.setIdentity();
+	transfrontcube.setOrigin(btVector3(info.frontcube_offset.x, info.frontcube_offset.y, info.frontcube_offset.z));
+	comShape->addChildShape(transfrontcube, colfrontcube);
+
+
+	btCollisionShape* colbackcube = new btBoxShape(btVector3(info.backcube_size.x * 0.5f, info.backcube_size.y * 0.5f, info.backcube_size.z * 0.5f));
+	shapes.add(colbackcube);
+	btTransform transbackcube;
+	transbackcube.setIdentity();
+	transbackcube.setOrigin(btVector3(info.backcube_offset.x, info.backcube_offset.y, info.backcube_offset.z));
+	comShape->addChildShape(transbackcube, colbackcube);
+
+	btCollisionShape* colbackcubereinforce1 = new btBoxShape(btVector3(info.backcubereinforce1_size.x * 0.5f, info.backcubereinforce1_size.y * 0.5f, info.backcubereinforce1_size.z * 0.5f));
+	shapes.add(colbackcubereinforce1);
+	btTransform transbackcubereinforce1;
+	transbackcubereinforce1.setIdentity();
+	transbackcubereinforce1.setOrigin(btVector3(info.backcubereinforce1_offset.x, info.backcubereinforce1_offset.y, info.backcubereinforce1_offset.z));
+	comShape->addChildShape(transbackcubereinforce1, colbackcubereinforce1);
+	
+	btCollisionShape* colbackcubereinforce2 = new btBoxShape(btVector3(info.backcubereinforce2_size.x * 0.5f, info.backcubereinforce2_size.y * 0.5f, info.backcubereinforce2_size.z * 0.5f));
+	shapes.add(colbackcubereinforce2);
+	btTransform transbackcubereinforce2;
+	transbackcubereinforce2.setIdentity();
+	transbackcubereinforce2.setOrigin(btVector3(info.backcubereinforce2_offset.x, info.backcubereinforce2_offset.y, info.backcubereinforce2_offset.z));
+	comShape->addChildShape(transbackcubereinforce2, colbackcubereinforce2);
+
+
 
 	btTransform startTransform;
 	startTransform.setIdentity();
