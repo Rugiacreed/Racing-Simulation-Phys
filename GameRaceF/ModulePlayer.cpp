@@ -21,12 +21,16 @@ bool ModulePlayer::Start()
 	VehicleInfo car;
 
 	// Car properties ----------------------------------------
+	
+	//main chassis
 	car.chassis_size.Set(2, 1.2, 4);
 	car.chassis_offset.Set(0, 1.3, 0);
 	
+	//front chassis
 	car.frontcube_size.Set(2, 0.8, 1.5);
 	car.frontcube_offset.Set(0, 1.1, 2.2);
 
+	//"aleron" for the car 
 	car.backcube_size.Set(3.2, 0.4, 0.7);
 	car.backcube_offset.Set(0, 2, -2.6);
 	car.backcubereinforce1_size.Set(0.2, 0.2, 0.7);
@@ -34,7 +38,8 @@ bool ModulePlayer::Start()
 	car.backcubereinforce2_size.Set(0.2, 0.2, 0.7);
 	car.backcubereinforce2_offset.Set(1, 1.7, -2.2);
 
-	car.mass = 600.0f;
+	//car characteristics
+	car.mass = 450.0f;
 	car.suspensionStiffness = 15.88f;
 	car.suspensionCompression = 0.83f;
 	car.suspensionDamping = 0.88f;
@@ -108,7 +113,7 @@ bool ModulePlayer::Start()
 	car.wheels[3].steering = false;
 
 	vehicle = App->physics->AddVehicle(car);
-	vehicle->SetPos(0, 0, 0);
+	vehicle->SetPos(30, 10, 240);
 	
 	return true;
 }
@@ -126,9 +131,10 @@ update_status ModulePlayer::Update(float dt)
 {
 	turn = acceleration = brake = 0.0f;
 
+//stop from going backwards+acceleration forward
 	if(App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
 	{
-		if (vehicle->GetKmh() < -5) {
+		if (vehicle->GetKmh() < -3.5) {
 			brake = -BRAKE_POWER;
 		}
 		else {
@@ -150,10 +156,10 @@ update_status ModulePlayer::Update(float dt)
 		if(turn > -TURN_DEGREES)
 			turn -= TURN_DEGREES;
 	}
-
+//stop from going forwards+acceleration backwards
 	if(App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
 	{
-		if (vehicle->GetKmh() > 5) {
+		if (vehicle->GetKmh() > 3.5) {
 			brake = BRAKE_POWER;
 		}
 		else {
