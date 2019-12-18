@@ -38,6 +38,12 @@ update_status ModuleSceneIntro::Update(float dt)
 	p.axis = true;
 	p.Render();
 
+
+
+
+
+
+	colliderscreated = true;
 	return UPDATE_CONTINUE;
 }
 
@@ -45,17 +51,31 @@ void ModuleSceneIntro::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
 }
 
-void ModuleSceneIntro::CreateCube(int angle, vec3 angle, vec3 offset, vec3 size, Color color)
+void ModuleSceneIntro::CreateCube(int angle1, vec3 angle, vec3 offset, vec3 size, Color color)
 {
-
-
-
+	Cube cube;
+	cube.size = size;
+	cube.SetPos(offset.x, offset.y, offset.z);
+	cube.color = color;
+	cube.SetRotation(angle1, angle);
+	if (colliderscreated == false) {
+		App->physics->AddBody(cube, 0);
+	}
+	cube.Render();
 }
 
-void ModuleSceneIntro::CreateCylinder(float radi, float altura, vec3 offset)
+void ModuleSceneIntro::CreateCylinder(float angle1, vec3 angle, float altura, float radi, vec3 offset, Color color)
 {
-
-
+	Cylinder cylinder;
+	cylinder.radius = radi;
+	cylinder.height = altura;
+	cylinder.SetPos(offset.x, offset.y, offset.z);
+	cylinder.color = color;
+	cylinder.SetRotation(angle1, angle);
+	if (colliderscreated == false) {
+		App->physics->AddBody(cylinder, 0);
+	}
+	cylinder.Render();
 
 }
 
