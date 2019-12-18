@@ -1,12 +1,12 @@
 ﻿  ModulePlayer.cpp
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(24,32): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(25,34): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(27,36): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(28,38): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(30,37): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(31,36): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(32,47): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(33,49): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(34,47): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\ModulePlayer.cpp(35,48): warning C4305:  'argument': truncation from 'double' to 'float'
-  3D Physics.vcxproj -> C:\Users\rogerpir\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\Debug\3D Physics - class5.exe
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(24): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(27): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(28): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(30): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(31): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(32): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(33): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(34): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(35): warning C4305: 'argument': truncation from 'double' to 'float'
+  3D Physics.vcxproj -> C:\Users\lenovo\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\Debug\3D Physics - class5.exe

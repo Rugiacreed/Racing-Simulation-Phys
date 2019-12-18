@@ -45,3 +45,21 @@ void ModuleSceneIntro::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
 }
 
+void ModuleSceneIntro::CreateCube(int angle, vec3 angle, vec3 offset, vec3 size, Color color)
+{
+
+
+
+}
+
+void ModuleSceneIntro::CreateCylinder(float radi, float altura, vec3 offset)
+{
+
+
+
+}
+
+
+
+	
+
