@@ -76,6 +76,7 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCube(110, { 0,1,0 }, { 45, 5, 243 }, { 18, 2, 10 }, Red);
 	CreateCube(120, { 0,1,0 }, { 50, 5, 241 }, { 18, 2, 10 }, Red);
 	CreateCube(120, { 0,1,0 }, { 80, 5, 224 }, { 18, 2, 85 }, Red);
+	
 	//first curve topes
 	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -8, 7, 233 }, Red);
 	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -7, 7, 236.5 }, White);
@@ -147,7 +148,9 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 109, 0, 26 }, White);
 
 	//objects to dodge
-	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 128, 0, 20 }, Red);
+	Cylinder cyl = CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 128, 0, 20 }, Red,cyl, true);
+	Cylinder cyl2= CreateCylinder(0, { 0, 0, 1 }, 18, 2, { 128, 2, 20 }, Red,cyl,false);
+	//p.body=
 	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 118, 0, -20 }, Red);
 	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 135, 0, -30 }, Red);
 	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 120, 0, -40 }, Red);
@@ -259,9 +262,44 @@ void ModuleSceneIntro::CreateCylinder(float angle1, vec3 angle, float altura, fl
 		App->physics->AddBody(cylinder, 0);
 	}
 	cylinder.Render();
-
 }
-
+Cylinder ModuleSceneIntro::CreateCylinder(float angle1, vec3 angle, float altura, float radi, vec3 offset, Color color, Cylinder ph, bool tru)
+{
+	if (tru == true) {
+		Cylinder cylinder;
+		cylinder.radius = radi;
+		cylinder.height = altura;
+		cylinder.SetPos(offset.x, offset.y, offset.z);
+		cylinder.color = color;
+		cylinder.SetRotation(angle1, angle);
+		if (colliderscreated == false) {
+			PhysBody3D* b = App->physics->AddBody(cylinder, 0);
+			cylinder.body = b;
+		}
+		else {
+			cylinder.Render();
+		}
+		return cylinder;
+	}
+	else {
+		p.radius = radi;
+		p.height = altura;
+		p.SetPos(offset.x, offset.y, offset.z);
+		p.color = color;
+		p.SetRotation(angle1, angle);
+		if (colliderscreated == false) {
+			PhysBody3D* phy = App->physics->AddBody(p);
+			p.body = phy;
+			App->physics->AddConstraintP2P(*ph.body, *phy, { 0,0,0 }, { 0, 0, 0 });
+		}
+		else {
+			p.body->GetTransform(&p.transform);
+			p.Render();
+		}
+		return p;
+	}
+	
+}
 
 
 	
