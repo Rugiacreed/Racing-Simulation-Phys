@@ -23,26 +23,26 @@ bool ModulePlayer::Start()
 	// Car properties ----------------------------------------
 	
 	//main chassis
-	car.chassis_size.Set(2, 1.2, 4);
-	car.chassis_offset.Set(0, 1.3, 0);
+	car.chassis_size.Set(2, 0.8, 4);
+	car.chassis_offset.Set(0, 0.7, 0);
 	
 	//front chassis
-	car.frontcube_size.Set(2, 0.8, 1.5);
-	car.frontcube_offset.Set(0, 1.1, 2.2);
+	car.frontcube_size.Set(2, 0.4, 1.5);
+	car.frontcube_offset.Set(0, 0.5, 2.2);
 
 	//"aleron" for the car 
 	car.backcube_size.Set(3.2, 0.4, 0.7);
-	car.backcube_offset.Set(0, 2, -2.6);
+	car.backcube_offset.Set(0, 1.2, -2.6);
 	car.backcubereinforce1_size.Set(0.2, 0.2, 0.7);
-	car.backcubereinforce1_offset.Set(-1, 1.7, -2.2);
+	car.backcubereinforce1_offset.Set(-1, 0.9, -2.2);
 	car.backcubereinforce2_size.Set(0.2, 0.2, 0.7);
-	car.backcubereinforce2_offset.Set(1, 1.7, -2.2);
+	car.backcubereinforce2_offset.Set(1, 0.9, -2.2);
 
 	//car characteristics
-	car.mass = 450.0f;
-	car.suspensionStiffness = 15.88f;
-	car.suspensionCompression = 0.83f;
-	car.suspensionDamping = 0.88f;
+	car.mass = 400.0f;
+	car.suspensionStiffness = 25.88f;
+	car.suspensionCompression = 2.00f;
+	car.suspensionDamping = 2.00f;
 	car.maxSuspensionTravelCm = 1000.0f;
 	car.frictionSlip = 50.5;
 	car.maxSuspensionForce = 6000.0f;
@@ -113,7 +113,7 @@ bool ModulePlayer::Start()
 	car.wheels[3].steering = false;
 
 	vehicle = App->physics->AddVehicle(car);
-	vehicle->SetPos(0, 0, 0);
+	vehicle->SetPos(0, 5, 0);
 	
 	return true;
 }
@@ -134,7 +134,7 @@ update_status ModulePlayer::Update(float dt)
 //stop from going backwards+acceleration forward
 	if(App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
 	{
-		if (vehicle->GetKmh() < -3.5) {
+		if (vehicle->GetKmh() < -7) {
 			brake = -BRAKE_POWER;
 		}
 		else {
