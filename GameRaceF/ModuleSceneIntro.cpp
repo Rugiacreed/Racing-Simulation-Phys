@@ -122,6 +122,40 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 117, 7, 182 }, White);
 	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 119, 7, 176 }, Red);
 
+	//jump to floor level
+
+	CreateCube(0, { 1,0,0 }, { 130, 0, 140 }, { 22, 3, 1 }, White);
+	CreateCube(0, { 1,0,0 }, { 141, 0, 90 }, { 1, 3, 100 }, White);
+	CreateCube(0, { 1,0,0 }, { 119, 0, 90 }, { 1, 3, 100 }, White);
+	CreateCube(0, { 1,0,0 }, { 151, 0, -50 }, { 1, 12, 150 }, White);
+	CreateCube(0, { 1,0,0 }, { 109, 0, -50 }, { 1, 12, 150 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 145, 0, 41 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 147, 0, 36 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 149, 0, 31 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 151, 0, 26 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 115, 0, 41 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 113, 0, 36 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 111, 0, 31 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 109, 0, 26 }, White);
+
+	//objects to dodge
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 128, 0, 20 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 118, 0, -20 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 135, 0, -30 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 120, 0, -40 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 120, 0, -47 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 140, 0, -50 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 127, 0, -55 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 119, 0, -50 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 137, 0, -65 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 145, 0, -65 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 125, 0, -80 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 115, 0, -88 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 134, 0, -96 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 127, 0, -120 }, Red);
+
+
+
 
 	
 	
