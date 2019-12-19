@@ -1,4 +1,6 @@
-﻿  ModulePlayer.cpp
+﻿  ModuleCamera3D.cpp
+  ModulePhysics3D.cpp
+  ModulePlayer.cpp
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(26): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(27): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(28): warning C4305: 'argument': truncation from 'double' to 'float'
@@ -13,4 +15,6 @@ c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.c
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(41): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(42): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lenovo\documents\github\racing-simulation-phys\gameracef\moduleplayer.cpp(43): warning C4305: 'argument': truncation from 'double' to 'float'
+  PhysVehicle3D.cpp
+  Generating Code...
   3D Physics.vcxproj -> C:\Users\lenovo\Documents\GitHub\Racing-Simulation-Phys\GameRaceF\Debug\3D Physics - class5.exe
