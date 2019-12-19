@@ -196,19 +196,37 @@ update_status ModuleSceneIntro::Update(float dt)
 
 
 
+	Sphere ballkicker;
+	ballkicker.SetPos(1, 1, 1);
+	ballkicker.radius = 1;
+	MySphereObj.PushBack(ballkicker);
+
+	PhysBody3D*ballkickerObject;
+	ballkickerObject = App->physics->AddBody(ballkicker, 1);
+	MyPhysbodySphereobj.PushBack(ballkickerObject);
+
+	Cube rect;
+	rect.size.y = 3;
+	MyCubeObj.PushBack(rect);
+
+	PhysBody3D* RectObject;
+	RectObject = App->physics->AddBody(rect, 0);
+	MyPhysbodyCubeobj.PushBack(RectObject);
+
+	//P2P Constraint to make ball kicker with rect 
+	App->physics->Add_P2P_Constraint(*ballkickerObject->GetRigidBody(), *RectObject->GetRigidBody(), btVector3(0, 1, 0), btVector3(0, 1, 0), true);
 
 
+	for (int i = 0; i < MySphereObj.Count(); i++) {
+		MySphereObj[i].Render();
+		MyPhysbodySphereobj[i]->GetTransform(&MySphereObj[i].transform);
+	}
+	for (int i = 0; i < MyCubeObj.Count(); i++) {
+		MyCubeObj[i].Render();
+		MyPhysbodyCubeobj[i]->GetTransform(&MyCubeObj[i].transform);
+	}
 
 
-	
-
-
-
-
-	
-	
-
-	
 	
 	
 	//CreateCylinder(90, { 0, 0, 1 }, 8, 2, { 0, 1, 10 }, Red);
