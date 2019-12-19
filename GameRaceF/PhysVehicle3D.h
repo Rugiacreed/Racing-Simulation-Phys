@@ -27,6 +27,12 @@ struct VehicleInfo
 	vec3 chassis_size;
 	vec3 chassis_offset;
 
+	vec3 chassis2_size;
+	vec3 chassis2_offset;
+
+	vec3 chassis3_size;
+	vec3 chassis3_offset;
+
 	vec3 frontcube_size;
 	vec3 frontcube_offset;
 	

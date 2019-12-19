@@ -25,6 +25,10 @@ bool ModulePlayer::Start()
 	//main chassis
 	car.chassis_size.Set(2, 0.8, 4);
 	car.chassis_offset.Set(0, 0.7, 0);
+	car.chassis2_size.Set(1.2, 0.8, 3.5);
+	car.chassis2_offset.Set(0, 1, -0.2);
+	car.chassis3_size.Set(0.2, 0.3, 2);
+	car.chassis3_offset.Set(0, 1.5, -1.2);
 	
 	//front chassis
 	car.frontcube_size.Set(2, 0.4, 1.5);

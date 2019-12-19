@@ -316,6 +316,19 @@ PhysVehicle3D* ModulePhysics3D::AddVehicle(const VehicleInfo& info)
 	transbackcubereinforce2.setOrigin(btVector3(info.backcubereinforce2_offset.x, info.backcubereinforce2_offset.y, info.backcubereinforce2_offset.z));
 	comShape->addChildShape(transbackcubereinforce2, colbackcubereinforce2);
 
+	btCollisionShape* colchassis2 = new btBoxShape(btVector3(info.chassis2_size.x * 0.5f, info.chassis2_size.y * 0.5f, info.chassis2_size.z * 0.5f));
+	shapes.add(colchassis2);
+	btTransform transchassis2;
+	transchassis2.setIdentity();
+	transchassis2.setOrigin(btVector3(info.chassis2_offset.x, info.chassis2_offset.y, info.chassis2_offset.z));
+	comShape->addChildShape(transchassis2, colchassis2);
+
+	btCollisionShape* colchassis3 = new btBoxShape(btVector3(info.chassis3_size.x * 0.5f, info.chassis3_size.y * 0.5f, info.chassis3_size.z * 0.5f));
+	shapes.add(colchassis3);
+	btTransform transchassis3;
+	transchassis3.setIdentity();
+	transchassis3.setOrigin(btVector3(info.chassis3_offset.x, info.chassis3_offset.y, info.chassis3_offset.z));
+	comShape->addChildShape(transchassis3, colchassis3);
 
 
 	btTransform startTransform;

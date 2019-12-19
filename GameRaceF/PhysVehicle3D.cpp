@@ -88,6 +88,28 @@ void PhysVehicle3D::Render()
 	backcubereinforce2.transform.M[14] += offsetbackcubereinforce2.getZ();
 	backcubereinforce2.color = Purple;
 	backcubereinforce2.Render();
+
+	Cube chassis2(info.chassis2_size.x, info.chassis2_size.y, info.chassis2_size.z);
+	vehicle->getChassisWorldTransform().getOpenGLMatrix(&chassis2.transform);
+	btVector3 offsetchassis2(info.chassis2_offset.x, info.chassis2_offset.y, info.chassis2_offset.z);
+	offsetchassis2 = offsetchassis2.rotate(q.getAxis(), q.getAngle());
+	chassis2.transform.M[12] += offsetchassis2.getX();
+	chassis2.transform.M[13] += offsetchassis2.getY();
+	chassis2.transform.M[14] += offsetchassis2.getZ();
+	chassis2.color = Green;
+	chassis2.Render();
+
+	Cube chassis3(info.chassis3_size.x, info.chassis3_size.y, info.chassis3_size.z);
+	vehicle->getChassisWorldTransform().getOpenGLMatrix(&chassis3.transform);
+	btVector3 offsetchassis3(info.chassis3_offset.x, info.chassis3_offset.y, info.chassis3_offset.z);
+	offsetchassis3 = offsetchassis3.rotate(q.getAxis(), q.getAngle());
+	chassis3.transform.M[12] += offsetchassis3.getX();
+	chassis3.transform.M[13] += offsetchassis3.getY();
+	chassis3.transform.M[14] += offsetchassis3.getZ();
+	chassis3.color = Purple;
+	chassis3.Render();
+
+
 }
 
 // ----------------------------------------------------------------------------
