@@ -38,11 +38,12 @@ update_status ModuleSceneIntro::Update(float dt)
 	p.axis = true;
 	p.Render();
 
+
+						//"race" map
 	//no exit line(backwards)
 	CreateCube(0, { 0,1,0 }, { 0, 0, -9.5 }, { 14, 5, 1}, White);
 	//start zone
 	CreateCube(0, { 0,1,0 }, { 0, 0, 0}, { 14, 0.1, 10 }, Red);
-	//"race" map
 	CreateCube(0, { 0,1,0 }, { 7, 0, 50}, {1, 3, 120}, White);
 	CreateCube(0, { 0,1,0 }, { -7, 0, 50}, { 1, 3, 120}, White);
 	CreateCube(0, { 0,1,0 }, { 0, 0, 110 }, { 14, 0.1, 10 }, Red);
@@ -50,8 +51,8 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCube(-15, { 1,0,0 }, { 0, 0.5, 117.7 }, { 14, 0.1, 2 }, Red);
 	CreateCube(-25, { 1,0,0 }, { 0, 1.1, 119.5 }, { 14, 0.1, 2 }, Red);
 	CreateCube(-30, { 1,0,0 }, { 0, 2., 121.2 }, { 14, 0.1, 2 }, Red);
+	
 	//jump ramp
-
 	CreateCube(0, { 0,1,0 }, { 0, 5, 200 }, { 18, 2, 60 }, Red);
 	CreateCube(0, { 0,1,0 }, { 9, 7, 195 }, { 1, 9, 55 }, Red);
 	CreateCube(0, { 0,1,0 }, { -9, 7, 200 }, { 1, 9, 60 }, Red);
@@ -67,21 +68,63 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCube(110, { 0,1,0 }, { 45, 5, 243 }, { 18, 2, 10 }, Red);
 	CreateCube(120, { 0,1,0 }, { 50, 5, 241 }, { 18, 2, 10 }, Red);
 	CreateCube(120, { 0,1,0 }, { 80, 5, 224 }, { 18, 2, 85 }, Red);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { -8, 7, 233 }, Red);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { -7, 7, 236.5 }, White);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { -4, 7, 240 }, Red);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { -1, 7, 243 }, White);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { 2.5, 7, 246 }, Red);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { 7, 7, 248 }, White);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { 12, 7, 250 }, Red);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { 16, 7, 253 }, White);
-	CreateCylinder(90, { 0, 0, 1 }, 8, 1, { 20, 7, 255 }, Red);
-
-
-
-
+	//first curve topes
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -8, 7, 233 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -7, 7, 236.5 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -4, 7, 240 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { -1, 7, 243 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 2.5, 7, 246 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 7, 7, 248 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 12, 7, 250 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 16, 7, 253 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 20, 7, 255 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 26, 7, 255 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 30.5, 7, 255 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 35, 7, 255 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 40, 7, 254 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 45, 7, 253 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 51, 7, 251 }, Red);
+	CreateCube(90, { 0,1,0 }, { 35, 5, 235 }, { 25, 2, 55 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 55, 7, 225 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 50, 7, 225 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 45, 7, 225 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 40, 7, 225 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 35, 7, 225 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 30, 7, 225 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 25, 7, 225 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 20, 7, 225 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 15, 7, 225 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 10, 7, 223 }, White);
 	CreateCube(120, { 0,1,0 }, { 90, 7, 229 }, { 1, 9, 80 }, Red);
-	CreateCube(120, { 0,1,0 }, { 83, 7, 212 }, { 1, 9, 75 }, Red);
+	CreateCube(120, { 0,1,0 }, { 83, 7, 212 }, { 1, 9, 65 }, Red);
+
+	//second curve
+	CreateCube(130, { 0,1,0 }, { 118, 5, 202}, { 18, 2, 10 }, Red);
+	CreateCube(145, { 0,1,0 }, { 122, 5, 198 }, { 18, 2, 10 }, Red);
+	CreateCube(155, { 0,1,0 }, { 126, 5, 191 }, { 18, 2, 10 }, Red);
+	CreateCube(165, { 0,1,0 }, { 128, 5, 184 }, { 18, 2, 10 }, Red);
+	CreateCube(175, { 0,1,0 }, { 130, 5, 176 }, { 18, 2, 10 }, Red);
+	CreateCube(0, { 1,0,0 }, { 130, 5, 160 }, { 18, 2, 30 }, Red);
+	CreateCube(0, { 1,0,0 }, { 139, 7, 160 }, { 1, 9, 30 }, Red);
+	CreateCube(0, { 1,0,0 }, { 121, 7, 160 }, { 1, 9, 30 }, Red);
+	
+
+	//second curve topes
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 127, 7, 207 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 131, 7, 202 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 133.5, 7, 196.5 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 135.5, 7, 190.5 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 136.5, 7, 185.5 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 138.5, 7, 179.5 }, White);
+	CreateCube(-25, { 0,1,0 }, { 118, 5, 188 }, { 10, 2, 40 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 112, 7, 194 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 114, 7, 188 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 117, 7, 182 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 1.8, { 119, 7, 176 }, Red);
+
+
+	
+	
 
 	
 	
