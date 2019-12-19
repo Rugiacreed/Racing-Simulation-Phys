@@ -45,11 +45,4 @@ public:
 	PhysMotor3D* left_wheel;
 	PhysMotor3D* right_wheel;
 
-	Sphere n;
-	p2DynArray<Sphere> MySphereObj;
-	p2DynArray<PhysBody3D*> MyPhysbodySphereobj;
-
-	p2DynArray<Cube> MyCubeObj;
-	p2DynArray<PhysBody3D*> MyPhysbodyCubeobj;
-
 };
