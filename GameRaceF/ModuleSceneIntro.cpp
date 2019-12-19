@@ -154,6 +154,50 @@ update_status ModuleSceneIntro::Update(float dt)
 	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 134, 0, -96 }, Red);
 	CreateCylinder(90, { 0, 0, 1 }, 12, 2, { 127, 0, -120 }, Red);
 
+	//third curve
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 118, 0, -168 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 124, 0, -167 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 128, 0, -163 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 132, 0, -159 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 136, 0, -155 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 141, 0, -150 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 145, 0, -145 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 147, 0, -140 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 149, 0, -135 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 151, 0, -130 }, White);
+
+	
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 99, 0, -150 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 103, 0, -145 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 105, 0, -140 }, White);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 107, 0, -135 }, Red);
+	CreateCylinder(90, { 0, 0, 1 }, 8, 2.2, { 109, 0, -130 }, White);
+
+	//final rect
+	CreateCube(0, { 1,0,0 }, { 49, 0, -150 }, { 100, 3, 1 }, White);
+	CreateCube(0, { 1,0,0 }, { 59, 0, -167 }, { 120, 3, 1 }, White);
+	
+	//final jump
+	CreateCube(0, { 0,1,0 }, { 1.9, 0, -158 }, { 2, 0.1, 15 }, Red);
+	CreateCube(-10, { 0,0,1 }, { 0, 0.1, -158 }, { 2, 0.1, 15 }, Red);
+	CreateCube(-15, { 0,0,1 }, { -1.9, 0.5, -158}, { 2, 0.1, 15 }, Red);
+	CreateCube(-25, { 0,0,1 }, { -3.7, 1.1, -158}, { 2, 0.1, 15 }, Red);
+	CreateCube(-30, { 0,0,1 }, { -5.4, 2, -158}, { 2, 0.1, 15 }, Red);
+
+	CreateCube(0, { 0,1,0 }, { -60, 0, -158 }, { 20, 5, 20 }, Red);
+	CreateCube(0, { 0,1,0 }, { -60, 5, -148 }, { 20, 15, 1 }, Red);
+	CreateCube(0, { 0,1,0 }, { -60, 5, -173 }, { 20, 15, 1 }, Red);
+	CreateCube(0, { 0,1,0 }, { -60, 15, -158 }, { 20, 1, 20 }, Red);
+
+
+
+
+
+
+
+
+	
+
 
 
 
