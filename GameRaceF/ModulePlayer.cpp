@@ -32,7 +32,7 @@ bool ModulePlayer::Start()
 	
 	//front chassis
 	car.frontcube_size.Set(2, 0.4, 1.5);
-	car.frontcube_offset.Set(0, 0.5, 2.2);
+	car.frontcube_offset.Set(0, 0.5, 2);
 
 	//"aleron" for the car 
 	car.backcube_size.Set(3.2, 0.4, 0.7);
