@@ -4,6 +4,7 @@
 #include "Primitive.h"
 #include "PhysVehicle3D.h"
 #include "PhysBody3D.h"
+#include "ModuleSceneIntro.h"
 
 ModulePlayer::ModulePlayer(Application* app, bool start_enabled) : Module(app, start_enabled), vehicle(NULL)
 {
@@ -178,9 +179,18 @@ update_status ModulePlayer::Update(float dt)
 
 	vehicle->Render();
 
-	char title[80];
-	sprintf_s(title, "%.1f Km/h", vehicle->GetKmh());
-	App->window->SetTitle(title);
+	
+	if (App->scene_intro->winner == true) {
+		App->window->SetTitle("You Win Motherfucker");
+	}
+	else {
+		char title[80];
+		sprintf_s(title, "%.1f Km/h", vehicle->GetKmh());
+		App->window->SetTitle(title);
+	}
+	
+
+	
 
 	return UPDATE_CONTINUE;
 }

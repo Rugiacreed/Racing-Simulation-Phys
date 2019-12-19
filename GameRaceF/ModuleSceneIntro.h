@@ -18,11 +18,11 @@ public:
 	bool Start();
 	update_status Update(float dt);
 	bool CleanUp();
-
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 	void CreateCube(int angle1, vec3 angle, vec3 offset, vec3 size, Color color);
 	void CreateCylinder(float angle1, vec3 angle, float altura, float radi, vec3 offset, Color color);
 	bool colliderscreated = false;
+	bool winner = false;
 
 public:
 	/*

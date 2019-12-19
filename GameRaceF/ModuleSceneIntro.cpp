@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "ModuleSceneIntro.h"
 #include "Primitive.h"
+#include  "PhysVehicle3D.h"
 #include "PhysBody3D.h"
 
 ModuleSceneIntro::ModuleSceneIntro(Application* app, bool start_enabled) : Module(app, start_enabled)
@@ -37,7 +38,14 @@ update_status ModuleSceneIntro::Update(float dt)
 	Plane p(0, 1, 0, 0);
 	p.axis = true;
 	p.Render();
-
+	mat4x4 m;
+	App->player->vehicle->GetTransform(&m);
+	vec3 positionplayer = { m[12],m[13],m[14] };
+	LOG("%f,%f,%f", positionplayer.x, positionplayer.y, positionplayer.z);
+	if ((positionplayer.x <= -110) && (positionplayer.x >= -160) && (positionplayer.y <= 38) && (positionplayer.y >= 0) && (positionplayer.z <= -148) && (positionplayer.z >= -168)) {
+		winner = true;
+	}
+	else;
 
 						//"race" map
 	//no exit line(backwards)
